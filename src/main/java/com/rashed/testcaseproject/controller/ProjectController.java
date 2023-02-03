@@ -32,7 +32,7 @@ public class ProjectController {
         service.projectRemove(id);
     }
 
-//    @JsonView(JsonViews.Brief.class)
+    @JsonView(JsonViews.Brief.class)
     @GetMapping("/get/{id}")
     public Project get(@PathVariable String id){
         return service.getId(id);
