@@ -15,11 +15,11 @@ import lombok.experimental.Accessors;
 @Data
 @Accessors(chain = true)
 public class TestDto {
-    @JsonView({JsonViews.Brief.class,JsonViews.Small.class,JsonViews.Detail.class})
+    @JsonView({JsonViews.Small.class})
     private Integer id;
-    @JsonView({JsonViews.Brief.class,JsonViews.Small.class,JsonViews.Detail.class})
+    @JsonView({JsonViews.Small.class})
     private String name;
-    @JsonView({JsonViews.Brief.class,JsonViews.Detail.class})
+    @JsonView({JsonViews.Brief.class})
     private String office;
     @JsonView({JsonViews.Detail.class})
     private String officeUnit;

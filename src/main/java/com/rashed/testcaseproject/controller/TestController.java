@@ -15,7 +15,7 @@ import java.util.List;
  * @since 03-02-2023
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("/tests")
 public class TestController {
 
     @Autowired
@@ -31,27 +31,27 @@ public class TestController {
         return testService.updated(testDto);
     }
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}")
     public TestDto getItemById(@PathVariable Integer id){
         return testService.getTestDto(id);
     }
     @JsonView(JsonViews.Brief.class)
-    @GetMapping("/get/all/brief")
+    @GetMapping("/brief")
     public List<TestDto> getAllBrief(){
         return testService.getAllTestDto();
     }
     @JsonView(JsonViews.Small.class)
-    @GetMapping("/get/all/small")
+    @GetMapping("/small")
     public List<TestDto> getAllSmall(){
         return testService.getAllTestDto();
     }
     @JsonView(JsonViews.Detail.class)
-    @GetMapping("/get/all/details")
+    @GetMapping("/details")
     public List<TestDto> getAllDetails(){
         return testService.getAllTestDto();
     }
 
-    @DeleteMapping("/get/{id}")
+    @DeleteMapping("/{id}")
     public List<TestDto> testDtoDeleted(@PathVariable Integer id){
         return testService.deletedDto(id);
     }
